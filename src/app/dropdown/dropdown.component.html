@@ -1,0 +1,10 @@
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label">{{dropdown.label}}</label>
+  <div class="col-sm-6">
+    <select class="form-control" [(ngModel)]="dropdown.selectedValue" (change)="dropdownChange()">
+      <option *ngFor="let o of dropdown.data" [value]="o.value">
+        {{o.text}}
+      </option>
+    </select>
+  </div>
+</div>

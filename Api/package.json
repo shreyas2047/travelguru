@@ -1,0 +1,30 @@
+{
+  "name": "snapzon",
+  "version": "1.0.0",
+  "description": "this is a node projet with express,mongoose and passport",
+  "main": "server.js",
+  "scripts": {
+    "test": "nodemon server.js"
+  },
+  "engines": {
+    "node": "5.9.1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.2",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "express-session": "^1.14.2",
+    "jwt-simple": "^0.5.1",
+    "mongoose": "^4.6.6",
+    "morgan": "^1.7.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "request": "^2.79.0",
+    "underscore": "^1.8.3"
+  }
+}

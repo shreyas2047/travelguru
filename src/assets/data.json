@@ -1,0 +1,29 @@
+{
+    "hotels":[
+        {"name":"The Park",
+            "availableRooms":3,
+            "price":"5000",
+            "dateOfCheckIn":"12/1/2018",
+         "imageUrl":"https://a36c2e13a78ae1256a2f-1dc878dead8ec78a84e429cdf4c9df00.ssl.cf1.rackcdn.com/u/park-hotel-clarke-quay/homepage/Hotel-Facade.jpg"},
+         {"name":"NovoTel",
+            "availableRooms":10,
+            "price":"6000",
+            "dateOfCheckIn":"12/1/2018",
+         "imageUrl":"https://a36c2e13a78ae1256a2f-1dc878dead8ec78a84e429cdf4c9df00.ssl.cf1.rackcdn.com/u/park-hotel-clarke-quay/homepage/Hotel-Facade.jpg"},
+         {"name":"Sherton",
+            "availableRooms":10,
+            "price":"7000",
+            "dateOfCheckIn":"22/1/2018",
+         "imageUrl":"https://a36c2e13a78ae1256a2f-1dc878dead8ec78a84e429cdf4c9df00.ssl.cf1.rackcdn.com/u/park-hotel-clarke-quay/homepage/Hotel-Facade.jpg"},
+         {"name":"ITC kakatiya",
+            "availableRooms":30,
+            "price":"8000",
+            "dateOfCheckIn":"22/1/2018",
+         "imageUrl":"https://a36c2e13a78ae1256a2f-1dc878dead8ec78a84e429cdf4c9df00.ssl.cf1.rackcdn.com/u/park-hotel-clarke-quay/homepage/Hotel-Facade.jpg"},
+         {"name":"Taj",
+            "availableRooms":50,
+            "price":"10000",
+            "dateOfCheckIn":"24/1/2018",
+         "imageUrl":"https://a36c2e13a78ae1256a2f-1dc878dead8ec78a84e429cdf4c9df00.ssl.cf1.rackcdn.com/u/park-hotel-clarke-quay/homepage/Hotel-Facade.jpg"}
+    ]
+}

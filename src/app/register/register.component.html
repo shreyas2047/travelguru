@@ -1,0 +1,77 @@
+<div class="alert alert-danger alert-dismissible fade show" role="alert" *ngIf="showError">
+  <strong>Error in fetching the information</strong>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label">User Name</label>
+  <div class="col-sm-6">
+    <input type="text" class="form-control" placeholder="User Name" [(ngModel)]="registerUser.userName">
+  </div>
+</div>
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label">Password</label>
+  <div class="col-sm-6">
+    <input type="password" class="form-control" placeholder="Password" [(ngModel)]="registerUser.password">
+  </div>
+</div>
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label">First Name</label>
+  <div class="col-sm-6">
+    <input type="text" class="form-control" restrictinput [RestrictExpression]="regexAlphabets" placeholder="First Name" [(ngModel)]="registerUser.firstName">
+  </div>
+</div>
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label">Last Name</label>
+  <div class="col-sm-6">
+    <input type="text" class="form-control" restrictinput [RestrictExpression]="regexAlphabets" placeholder="Last Name" [(ngModel)]="registerUser.lastName">
+  </div>
+</div>
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label">Age</label>
+  <div class="col-sm-6">
+    <input type="text" class="form-control" restrictinput [RestrictExpression]="regexNumbers" placeholder="Age"
+     [(ngModel)]="registerUser.age">
+  </div>
+</div>
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label">Email</label>
+  <div class="col-sm-6">
+    <input type="text" class="form-control" placeholder="Email" [(ngModel)]="registerUser.email">
+  </div>
+</div>
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label">Gender</label>
+  <div class="col-sm-6">
+    <input type="radio" name="gender" value="M" [(ngModel)]="registerUser.gender">Male
+    <input type="radio" name="gender" value="F" [(ngModel)]="registerUser.gender">Female
+  </div>
+</div>
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label">Country</label>
+  <div class="col-sm-6">
+    <select class="form-control" [(ngModel)]="registerUser.country">
+      <option *ngFor="let c of countries" [value]="c.code">{{c.name}}</option>
+    </select>
+  </div>
+</div>
+
+<app-dropdown [dropdown]="countryDropDown"></app-dropdown>
+<app-dropdown [dropdown]="maritalStatusDropDown"></app-dropdown>
+
+<div class="form-group row">
+
+  <div class="col-sm-6 offset-sm-2">
+    <input type="checkbox" [(ngModel)]="registerUser.agree">I Agree
+  </div>
+</div>
+
+<div class="form-group row">
+
+  <div class="col-sm-6 offset-sm-2">
+    <button class="btn btn-primary" (click)="register()">Register</button>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+     <a class="navbar-brand" href="#">
+        <!-- <img [src]="TitleAndImage.image" width="30" height="30" class="d-inline-block align-top" alt=""> -->
+        <img src="{{TitleAndImage.image}}" width="30" height="30" class="d-inline-block align-top" alt="">
+        {{TitleAndImage.title}}
+      </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" *ngFor="let t of CenterTabs">
+
+          <a class="nav-link" [routerLink]="t.path"><i class="{{t.icon}}"></i>{{t.display}}</a>
+        </li>
+
+      </ul>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" *ngFor="let r of RightTabs">
+          <a class="nav-link" [routerLink]="r.path" *ngIf="r.visible">{{r.display}}</a>
+        </li>
+
+      </ul>
+
+      <ul class="navbar-nav mr-auto" *ngIf="UserDetails.isAuthenticated">
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)">{{UserDetails.firstName}}</a>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" (click)="logout()">Logout</button>
+        </li>
+
+      </ul>
+    </div>
+  </nav>

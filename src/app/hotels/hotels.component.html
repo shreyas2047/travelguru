@@ -1,0 +1,17 @@
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">No.</th>
+      <th scope="col">Hotel Name</th>
+      <th scope="col">Price for One Night</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let h of hotels; let i = index">
+      <th scope = 'row'>{{i}}</th>
+      <td>{{h.name}}</td>
+      <td>{{h.price}}</td>
+    </tr>
+  </tbody>
+</table>

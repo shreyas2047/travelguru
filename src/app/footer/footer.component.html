@@ -1,0 +1,20 @@
+<hr>
+<div class="footer navbar-fixed-bottom">
+  <div class="row">
+    <div class="col-md-3">
+      {{footer.text}}
+    </div>
+    <div class="col-md-3">
+      {{footer.year}}
+    </div>
+    <div class="col-md-3">
+      <select class="form-control" [(ngModel)]="country" (change)="selectPrefix()">
+        <option value="">Select Country</option>
+        <option *ngFor="let c of countries" [value]='c.code'>{{c.name}}</option></select>
+
+    </div>
+    <div class="col-md-2">
+      {{footer.phoneNumber| phoneformat:country:prefix}}
+    </div>
+  </div>
+</div>
